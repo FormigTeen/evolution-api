@@ -11,11 +11,11 @@ WORKDIR /evolution
 
 COPY ./package.json .
 
-RUN npm install
+RUN yarn
 
 COPY . .
 
-RUN npm run build
+RUN yarn build
 
 FROM node:20.7.0-alpine AS final
 
